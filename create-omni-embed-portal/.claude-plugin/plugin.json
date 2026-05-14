@@ -1,0 +1,19 @@
+{
+  "name": "create-omni-embed-portal",
+  "version": "1.0.0",
+  "description": "Scaffold a white-label React + Vite portal that embeds Omni Analytics (dashboards, AI Chat, Hub entity-folder, access filters via user attributes).",
+  "author": {
+    "name": "Fishtank Bubble"
+  },
+  "keywords": [
+    "omni",
+    "analytics",
+    "embed",
+    "white-label",
+    "react",
+    "vite",
+    "vercel",
+    "portal",
+    "sso"
+  ]
+}
