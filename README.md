@@ -45,7 +45,8 @@ The skill's `SKILL.md` cites specific files and line numbers from the reference 
 
 Two recorded demos show the end-to-end flow the scaffolded app produces. Watch these before invoking the skill to understand what you're building:
 
-1. **[Configuring and Embedding Demo Application](https://ro.am/share/kf9rvxy2-ozyawaf7-v4gvj2ai-0mle9r94)** — operator side: scanning a customer website, picking an industry template, wiring Omni credentials, theming, Hub entity folder setup, and AI Chat connection settings.
-2. **[Embedding POC Portal with Demo Settings](https://ro.am/share/gkr2v39j-5qtvqps2-0vldo04z-cljhd3l6)** — end-user side: logging in as different regions, walking the Overview → Dashboard → AI Chat → Flights (with live filter postMessage) → Hub tabs in the embedded portal.
+1. **[Configuring and Embedding Demo Application](https://ro.am/share/kf9rvxy2-ozyawaf7-v4gvj2ai-0mle9r94)** — what the embedded portal looks like *to end users* once it's configured. Operator scans the brand (CTAG airport), fixes up logo/colors/key messages, sets the entity-folder name, then logs in as an East-region manager and walks Overview → AI Chat → the RBAC dashboard tab (showcasing JavaScript-event filters vs. URL-parameter filters side-by-side) → Hub.
 
-The fishtank-bubble repo's README also embeds these recordings alongside a written walkthrough of every Config field and every dashboard tab.
+2. **[Embedding POC Portal with Demo Settings](https://ro.am/share/gkr2v39j-5qtvqps2-0vldo04z-cljhd3l6)** — *operator-side rewire*: scan a different customer site, fall back to industry-template default values when scans fail, expand "Advanced — Omni configuration" at the bottom of the Config page to drop in a fresh embed key + API key + vanity domain (`<org>.demo.exploreomni.dev`), pick a dashboard from the auto-fetched list, optionally clear the theme + region user attribute. Notably: **unchecking the region attribute auto-hides the RBAC tab** — tab visibility is config-driven. End result: a fresh portal scoped to a new entity (`mypass`) with the Hub auto-provisioned for it.
+
+The [fishtank-bubble README](https://github.com/fishtankau/fishtank-bubble#-video-walkthroughs) reproduces both transcripts paraphrased alongside a written walkthrough of every Config field and every dashboard tab.
