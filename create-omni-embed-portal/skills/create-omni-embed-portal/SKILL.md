@@ -400,7 +400,26 @@ When the user invokes this skill, follow this order:
 
 ## Reference implementation
 
-Live: https://fishtankbubble.vercel.app
-Repo: the directory containing this SKILL.md — every file mentioned above is in `src/` or `api/`.
+- **Live demo**: https://fishtankbubble.vercel.app
+- **Source repo**: https://github.com/fishtankau/fishtank-bubble — the canonical implementation of every file mentioned in this skill.
 
-When in doubt about the exact shape of a payload, the postMessage event, or a CSS class, READ THE REFERENCE FILES directly rather than guessing.
+Fastest way to scaffold a new customer app:
+
+```bash
+git clone https://github.com/fishtankau/fishtank-bubble.git <new-customer-app-name>
+cd <new-customer-app-name>
+rm -rf .git && git init -b main           # strip history, start fresh
+npm install
+# then run through the build sequence below to rebrand
+```
+
+When in doubt about the exact shape of a payload, the postMessage event, or a CSS class, READ THE REFERENCE REPO FILES directly rather than guessing. Specifically:
+
+- Embed SSO payload: [`api/omni-embed-url.js`](https://github.com/fishtankau/fishtank-bubble/blob/main/api/omni-embed-url.js) and [`server.js`](https://github.com/fishtankau/fishtank-bubble/blob/main/server.js)
+- Runtime filter postMessage: [`src/components/tabs/Flights.jsx`](https://github.com/fishtankau/fishtank-bubble/blob/main/src/components/tabs/Flights.jsx)
+- Hub APPLICATION mode: [`src/components/tabs/Hub.jsx`](https://github.com/fishtankau/fishtank-bubble/blob/main/src/components/tabs/Hub.jsx)
+- User-attribute resolution: [`src/utils/userAttributes.js`](https://github.com/fishtankau/fishtank-bubble/blob/main/src/utils/userAttributes.js)
+- Entity key derivation: [`src/utils/domain.js`](https://github.com/fishtankau/fishtank-bubble/blob/main/src/utils/domain.js)
+- Industry mock fallback: [`src/utils/industryMocks.js`](https://github.com/fishtankau/fishtank-bubble/blob/main/src/utils/industryMocks.js)
+- Brand auto-scan: [`api/scrape.js`](https://github.com/fishtankau/fishtank-bubble/blob/main/api/scrape.js)
+- Config page (scan flow, industry buttons, editable products, Hub config): [`src/pages/Config.jsx`](https://github.com/fishtankau/fishtank-bubble/blob/main/src/pages/Config.jsx)

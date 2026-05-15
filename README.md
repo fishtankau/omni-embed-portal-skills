@@ -35,5 +35,8 @@ Then in any Claude Code session, the `create-omni-embed-portal` skill will be av
 
 ## Reference
 
-- Live demo: <https://fishtankbubble.vercel.app>
-- Omni Embed docs: <https://docs.omni.co/embed/setup/standard-sso>
+- **Live demo**: <https://fishtankbubble.vercel.app>
+- **Reference repo** (the actual code this skill scaffolds): <https://github.com/fishtankau/fishtank-bubble>
+- **Omni Embed docs**: <https://docs.omni.co/embed/setup/standard-sso>
+
+The skill's `SKILL.md` cites specific files and line numbers from the reference repo. When working through the skill, clone or browse <https://github.com/fishtankau/fishtank-bubble> as the source of truth for exact code shapes (API payloads, postMessage events, CSS classes, etc.).
