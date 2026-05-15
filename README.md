@@ -41,12 +41,28 @@ Then in any Claude Code session, the `create-omni-embed-portal` skill will be av
 
 The skill's `SKILL.md` cites specific files and line numbers from the reference repo. When working through the skill, clone or browse <https://github.com/fishtankau/fishtank-bubble> as the source of truth for exact code shapes (API payloads, postMessage events, CSS classes, etc.).
 
-## Video walkthroughs
+## Recording Summaries
 
-Two recorded demos show the end-to-end flow the scaffolded app produces. Watch these before invoking the skill to understand what you're building:
+### First Recording: Overview of the Default Embed Demo Portal
 
-1. **[Configuring and Embedding Demo Application](https://ro.am/share/kf9rvxy2-ozyawaf7-v4gvj2ai-0mle9r94)** — what the embedded portal looks like *to end users* once it's configured. Operator scans the brand (CTAG airport), fixes up logo/colors/key messages, sets the entity-folder name, then logs in as an East-region manager and walks Overview → AI Chat → the RBAC dashboard tab (showcasing JavaScript-event filters vs. URL-parameter filters side-by-side) → Hub.
+📹 **[Watch on Roam →](https://ro.am/share/kf9rvxy2-ozyawaf7-v4gvj2ai-0mle9r94)**
 
-2. **[Embedding POC Portal with Demo Settings](https://ro.am/share/gkr2v39j-5qtvqps2-0vldo04z-cljhd3l6)** — *operator-side rewire*: scan a different customer site, fall back to industry-template default values when scans fail, expand "Advanced — Omni configuration" at the bottom of the Config page to drop in a fresh embed key + API key + vanity domain (`<org>.demo.exploreomni.dev`), pick a dashboard from the auto-fetched list, optionally clear the theme + region user attribute. Notably: **unchecking the region attribute auto-hides the RBAC tab** — tab visibility is config-driven. End result: a fresh portal scoped to a new entity (`mypass`) with the Hub auto-provisioned for it.
+This recording provides a walkthrough of the **standard demo environment**, showcasing the baseline features and user experience of the application.
 
-The [fishtank-bubble README](https://github.com/fishtankau/fishtank-bubble#-video-walkthroughs) reproduces both transcripts paraphrased alongside a written walkthrough of every Config field and every dashboard tab.
+* **Default Portal Experience:** Displays a pre-configured "SEATAC Airport" brand, featuring a landing page with an overview of services and an embedded AI chat.
+* **Performance Comparison:** Showcases a dedicated tab for comparing load times and performance between JavaScript events and URL parameter embedding.
+* **Identity & Access:** Demonstrates Role-Based Access Control (RBAC) and the use of user attributes to filter dashboard data (e.g., East Region Manager view).
+* **Standard Features:** Highlights the integration of filters, customized application folders, and the centralized Hub.
+
+---
+
+### Second Recording: Configuring Custom POCs and Demo Instances
+
+📹 **[Watch on Roam →](https://ro.am/share/gkr2v39j-5qtvqps2-0vldo04z-cljhd3l6)**
+
+This recording demonstrates how to use the **configuration page** to transition from the default setup to a specific customer Proof of Concept (POC) or a different demo instance.
+
+* **Advanced Configuration:** Details how to expand "Advanced Options" to input unique API and Embed keys, allowing the app to fetch specific dashboards from different environments.
+* **Dynamic Customization:** Shows how to override scanned data with manual values for products and services, ensuring the overview page aligns with a specific customer's needs.
+* **UI Logic:** Illustrates how the demo interface dynamically adapts based on the config page; unchecking specific attributes or features (like region filters) automatically hides the corresponding tabs in the live portal.
+* **Instance Switching:** Provides a step-by-step guide on generating new keys and updating domain settings to successfully launch a tailored customer instance.
