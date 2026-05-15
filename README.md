@@ -40,3 +40,12 @@ Then in any Claude Code session, the `create-omni-embed-portal` skill will be av
 - **Omni Embed docs**: <https://docs.omni.co/embed/setup/standard-sso>
 
 The skill's `SKILL.md` cites specific files and line numbers from the reference repo. When working through the skill, clone or browse <https://github.com/fishtankau/fishtank-bubble> as the source of truth for exact code shapes (API payloads, postMessage events, CSS classes, etc.).
+
+## Video walkthroughs
+
+Two recorded demos show the end-to-end flow the scaffolded app produces. Watch these before invoking the skill to understand what you're building:
+
+1. **[Configuring and Embedding Demo Application](https://ro.am/share/kf9rvxy2-ozyawaf7-v4gvj2ai-0mle9r94)** — operator side: scanning a customer website, picking an industry template, wiring Omni credentials, theming, Hub entity folder setup, and AI Chat connection settings.
+2. **[Embedding POC Portal with Demo Settings](https://ro.am/share/gkr2v39j-5qtvqps2-0vldo04z-cljhd3l6)** — end-user side: logging in as different regions, walking the Overview → Dashboard → AI Chat → Flights (with live filter postMessage) → Hub tabs in the embedded portal.
+
+The fishtank-bubble repo's README also embeds these recordings alongside a written walkthrough of every Config field and every dashboard tab.
