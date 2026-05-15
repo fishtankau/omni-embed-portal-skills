@@ -1,6 +1,6 @@
 # omni-embed-portal-skills
 
-Claude Code plugins for scaffolding white-label Omni Analytics embed portals.
+Claude Code plugins for scaffolding white-label Omni Analytics embed portals. 
 
 ## Plugins
 
@@ -43,16 +43,22 @@ The skill's `SKILL.md` cites specific files and line numbers from the reference 
 
 ## Recording Summaries
 
+White-label React + Vite portal that embeds **Omni Analytics** — dashboards, AI chat, per-customer entity folders, and access-filtered data — behind a configurable brand.
+
+**Live demo app:** <https://fishtankbubble.vercel.app>
+
+## 🎥 Recording Summaries
+
 ### First Recording: Overview of the Default Embed Demo Portal
 
 📹 **[Watch on Roam →](https://ro.am/share/kf9rvxy2-ozyawaf7-v4gvj2ai-0mle9r94)**
 
-This recording provides a walkthrough of the **standard demo environment**, showcasing the baseline features and user experience of the application.
+This recording provides a walkthrough of the **standard embed portal demo**, showcasing another embed portal user experience using generic data.
 
-* **Default Portal Experience:** Displays a pre-configured "SEATAC Airport" brand, featuring a landing page with an overview of services and an embedded AI chat.
+* **Default Portal Experience:** Displays a pre-configured "SEATAC Airport" brand, featuring a landing page with an overview portal page and Omni embed tabs.
 * **Performance Comparison:** Showcases a dedicated tab for comparing load times and performance between JavaScript events and URL parameter embedding.
 * **Identity & Access:** Demonstrates Role-Based Access Control (RBAC) and the use of user attributes to filter dashboard data (e.g., East Region Manager view).
-* **Standard Features:** Highlights the integration of filters, customized application folders, and the centralized Hub.
+* **Custommisation:** Highlights the integration of application filters passing values to Omni embedded dashboards.
 
 ---
 
@@ -60,9 +66,21 @@ This recording provides a walkthrough of the **standard demo environment**, show
 
 📹 **[Watch on Roam →](https://ro.am/share/gkr2v39j-5qtvqps2-0vldo04z-cljhd3l6)**
 
-This recording demonstrates how to use the **configuration page** to transition from the default setup to a specific customer Proof of Concept (POC) or a different demo instance.
+This recording demonstrates how to use the **configuration page** to transition from the default setup to a specific customer Proof of Concept (POC) or leverage demo instance.
 
-* **Advanced Configuration:** Details how to expand "Advanced Options" to input unique API and Embed keys, allowing the app to fetch specific dashboards from different environments.
-* **Dynamic Customization:** Shows how to override scanned data with manual values for products and services, ensuring the overview page aligns with a specific customer's needs.
-* **UI Logic:** Illustrates how the demo interface dynamically adapts based on the config page; unchecking specific attributes or features (like region filters) automatically hides the corresponding tabs in the live portal.
+* **Advanced Configuration:** Details how to expand "Advanced Options" to input instance API and Embed keys, allowing the app to fetch specific dashboards from different environments.
+* **Dynamic Customization:** Shows how to override scanned data with manual values for products and services, accelerating a more custom demo aligned to prospect's industry.
 * **Instance Switching:** Provides a step-by-step guide on generating new keys and updating domain settings to successfully launch a tailored customer instance.
+
+---
+
+## What this app is
+
+A single React app that lets you:
+
+- Point at **any customer website URL** and auto-generate a branded portal (logo, colors, key messages, products) from the site's HTML.
+- Fall back to a **industry template library** (Healthcare, Finance, Tech, Retail, …) when the site blocks scraping.
+- Embed **Omni dashboards** via signed SSO URLs, themed per-brand on the fly.
+- Embed Omni's **AI chat agent (Blobby)** with configurable connection scope.
+- Spin up a **per-brand Hub** using Omni's APPLICATION-mode entity folder — Omni auto-provisions one folder per `entity` key on first SSO.
+- Update dashboard filters from **outside the iframe** via `dashboard:filter-change-by-url-parameter` postMessage events (see the Flights tab).
